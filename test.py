@@ -3,11 +3,13 @@ from wallet import Wallet
 def test_getbalance():
     obj = Wallet(0)
     obj.set_balance(20)
+    print("hola")
     assert obj.get_balance() == 20
 
 def test_removebalance():
     obj = Wallet(50)
     obj.remove_balance(20)
+    print("hola")
     assert obj.get_balance() == 30
 
 def test_setbalance():
