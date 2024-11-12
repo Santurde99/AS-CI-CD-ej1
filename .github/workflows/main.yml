@@ -1,0 +1,15 @@
+name: Cartera check
+
+on: push
+
+jobs:
+  check-wallet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Bajar codigo
+        uses: actions/checkout@v4
+      - name: intalar pytest
+        run: pip install pytest
+      - name: Probar codigo
+        run: python3 test.py
